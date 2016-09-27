@@ -175,7 +175,11 @@ Get this from the settings area when logged into <a href="http://spark.io">http:
 <input type="button" value="a0-read" onClick="{
     sendToSpark('a0-read')
 }">
-
+   
+<input type="button" value="a2-read" onClick="{
+    sendToSpark('a2-read')
+}">
+   
 <input type="button" value="d0-send-1" onClick="{
     sendToSpark('d0-send-1')
 }">
@@ -187,7 +191,11 @@ Get this from the settings area when logged into <a href="http://spark.io">http:
 <input type="button" value="a5-send-255" onClick="{
     sendToSpark('a5-send-255')
 }">
-
+   
+<input type="button" value="a3-send-255" onClick="{
+    sendToSpark('a3-send-77')
+}">
+   
 <input type="button" value="a5-send-0" onClick="{
     sendToSpark('a5-send-0')                                             
 }">
@@ -219,11 +227,18 @@ Get this from the settings area when logged into <a href="http://spark.io">http:
 
 
 
-<input type=button id="myToVolts" value="Convert Sensor A1 reading into Volts" onclick="{
+<input type=button id="myToVolts" value="Convert Sensor A0 reading into Volts" onclick="{
   var myTemp = parseFloat(getElementById('myDivId').innerHTML)
   document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
 }">
 : <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
+   
+   <input type=button id="myToVolts" value="Convert Sensor A2 reading into Volts" onclick="{
+  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
+  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
+}">
+: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
+
 
 
 
